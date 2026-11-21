@@ -18,6 +18,8 @@ public class MainActivity extends Activity {
         s.setDomStorageEnabled(true);
         s.setAllowFileAccess(true);
         s.setAllowContentAccess(true);
+        // Allow the local asset page to fetch the HTTPS Apps Script API in WebView.
+        s.setAllowUniversalAccessFromFileURLs(true);
         s.setSupportZoom(false);
         s.setBuiltInZoomControls(false);
         webView.setWebViewClient(new WebViewClient());
